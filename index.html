@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Interns</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #7c2cdd;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff6ec7;
+            color: #fff;
+            border-radius: 25px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            padding: 2rem;
+        }
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        .highlight {
+   color: #00d4ff;
+    font-weight: bold;
+}
+
+        .hero .cta-button {
+            margin-top: 40rem;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff6ec7;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #42d1f5;
+        }
+        
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f8f9fa;
+            color: #aaa;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #ff6ec7;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #42d1f5;
+        }
+        .social-sidebar {
+    position: fixed;
+    right: 5px; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 15px;
+   
+}
+
+.social-sidebar a img {
+    width: 20x; /* Icon size */
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-sidebar a img:hover {
+    transform: scale(1.2);
+}
+@media (max-width: 768px) {
+    .social-sidebar {
+        position: fixed;
+        right: 5px; 
+        top: auto;
+        bottom: 50%; /* Keeps it floating in the middle */
+        transform: translateY(50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .social-sidebar a img {
+        width: 18px; /* Smaller icons for mobile */
+        height: 18px;
+    }
+}
+#typing-text {
+    font-weight: bold;
+    color: #7c2cdd;
+    border-right: 3px solid #7c2cdd; /* Cursor effect */
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(248, 249, 250, 0.9); /* Transparent effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: #7c2cdd; /* Changes color on scroll */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff6ec7;
+    color: #fff;
+    border-radius: 25px;
+}
+.hero .cta-button {
+    margin-top: 40rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6ec7, #42d1f5);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 110, 199, 0.5);
+}
+
+.hero .cta-button:hover {
+    background: linear-gradient(90deg, #42d1f5, #ff6ec7);
+    transform: scale(1.1);
+}
+.social-sidebar a img {
+    width: 25px; /* Increase icon size */
+    height: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-sidebar a img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px #ff6ec7); /* Adds glowing effect */
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><span id="typing-text"></span></div>
+
+        <nav class="">
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="social-sidebar">
+        <a href="https://www.instagram.com/thecreativeinterns/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/creative-interns-8b8103349/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/@TheCreativeInterns" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+        <a href="https://x.com/KshitijBha22891" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="X"></a>
+    </div>
+    
+    
+
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="Pink & Blue Futuristic Gaming Channel Youtube Intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div>
+            <h1>Welcome to <span class="highlight">CreativeInterns</span></h1>
+            <p>Your platform for innovation and creativity.</p>
+            <button class="cta-button" onclick="window.location.href='work.html'">🚀 "Let’s Innovate</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Creative Interns. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const text = "CreativeInterns";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 150); // Speed of typing
+            }
+        }
+        typeEffect();
+    });
+</script>
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+
+
+</html>

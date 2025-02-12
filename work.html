@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work and Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            padding: 1rem 2rem;
+            width: 100%;
+            background-color: transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #7c2cdd;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.8rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery figure {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            background-color: #7c2cdd;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #42d1f5;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            color: #666;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #ff6ec7;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #42d1f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CreativeInterns</div>
+    </header>
+
+    <p>Discover the Magic Behind Our Work</p>
+
+    <section class="gallery">
+        <figure>
+            <img src="Save The Date.mp4" alt="Project 1">
+        </figure>
+        <figure>
+            <img src="4.png" alt="Project 2">
+        </figure>
+        <figure>
+            <img src="wedding invitation card haldi.png" alt="Project 3">
+        </figure>
+        <figure>
+            <img src="Green and Orange Illustrated Haldi Invitation.png" alt="Project 4">
+        </figure>
+        <figure>
+            <img src="Black and Gold Floral Birthday Party Invitation.png" alt="Project 4">
+        </figure>
+        <figure>
+            <img src="work4.jpg" alt="Project 4">
+        </figure>
+        <figure>
+            <img src="work4.jpg" alt="Project 4">
+        </figure>
+        <figure>
+            <img src="work4.jpg" alt="Project 4">
+        </figure>
+        <figure>
+            <img src="work4.jpg" alt="Project 4">
+        </figure>
+    </section>
+    
+    <!-- Back Button -->
+    <a href="index.html" class="back-link">Back</a>
+
+    <footer>
+        &copy; 2025 Creative Interns. All rights reserved. | <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>
