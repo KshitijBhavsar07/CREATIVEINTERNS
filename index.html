@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,11 +34,12 @@
 
         .logo {
             display: flex;
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: bold;
             color: #7c2cdd;
             text-align: center;
         }
+
         nav {
             display: flex;
             gap: 2rem;
@@ -65,6 +67,7 @@
             height: 100vh;
             padding: 2rem;
         }
+
         .hero video {
             position: absolute;
             top: 0;
@@ -75,38 +78,14 @@
             z-index: -1;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #333;
-        }
-
         .hero p {
             margin-top: 1rem;
             font-size: 1.2rem;
-            color: #666;
-        }
-        .highlight {
-   color: #00d4ff;
-    font-weight: bold;
-}
-
-        .hero .cta-button {
-            margin-top: 40rem;
-            padding: 0.8rem 2rem;
-            font-size: 1.2rem;
-            color: #fff;
-            background-color: #ff6ec7;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            color: #7c2cdd;
         }
 
-        .hero .cta-button:hover {
-            background-color: #42d1f5;
-        }
-        
+
+
 
         footer {
             text-align: center;
@@ -125,125 +104,260 @@
         footer a:hover {
             color: #42d1f5;
         }
+
         .social-sidebar {
-    position: fixed;
-    right: 5px; 
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: transparent;
-    padding: 10px;
-    border-radius: 15px;
-   
-}
+            position: fixed;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: transparent;
+            padding: 10px;
+            border-radius: 15px;
+        }
 
-.social-sidebar a img {
-    width: 20x; /* Icon size */
-    height: 20px;
-    transition: transform 0.3s ease-in-out;
-}
+        .social-sidebar a img {
+            width: 20x;
+            height: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
 
-.social-sidebar a img:hover {
-    transform: scale(1.2);
-}
-@media (max-width: 768px) {
-    .social-sidebar {
-        position: fixed;
-        right: 5px; 
-        top: auto;
-        bottom: 50%; /* Keeps it floating in the middle */
-        transform: translateY(50%);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 8px;
-    }
+        .social-sidebar a img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0px 0px 10px #7c2cdd);
+            
+        }
 
-    .social-sidebar a img {
-        width: 18px; /* Smaller icons for mobile */
-        height: 18px;
-    }
-}
-#typing-text {
+        @media (max-width: 768px) {
+            .social-sidebar {
+                position: fixed;
+                right: 5px;
+                top: auto;
+                bottom: 50%;
+               
+                transform: translateY(50%);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 8px;
+            }
+
+            .social-sidebar a img {
+                width: 18px;
+                /* Smaller icons for mobile */
+                height: 18px;
+            }
+        }
+
+      
+        @keyframes blinkCursor {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+    
+      
+        .hero .cta-button {
+            margin-top: 40rem;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: #fff;
+            background: linear-gradient(90deg, #ff6ec7, #42d1f5);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(255, 110, 199, 0.5);
+        }
+        .hero .cta-button:hover {
+            color: #000;
+            border: 2px solid black;
+            background: transparent;
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 50px 20px;
+                background: white;
+                /* Fallback background color */
+            }
+
+            .hero video {
+                display: none;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+        .mobile-welcome {
+    display: none;
+    font-size: 2rem;
     font-weight: bold;
     color: #7c2cdd;
-    border-right: 3px solid #7c2cdd; /* Cursor effect */
-    padding-right: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: blinkCursor 0.8s infinite;
+    text-align: center;
+    margin-top: 20px;
 }
 
-@keyframes blinkCursor {
-    50% { border-color: transparent; }
+@media screen and (max-width: 768px) {
+   
+
+    .mobile-welcome {
+        display: block;
+        text-align: center;
+    }
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(248, 249, 250, 0.9); /* Transparent effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero video {
+        display: none; /* Hide the video on mobile */
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Responsive Logo */
+    .logo {
+        width: 120px; /* Adjust as needed */
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Centering welcome message */
+    .mobile-welcome {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #7c2cdd;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Navigation adjustments */
+    header nav {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        flex-direction: row; /* Keep About Us and Contact inline */
+        text-align: center;
+    }
+
+    header nav a {
+        padding: 10px 15px;
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
+        background-color: #7c2cdd;
+        border-radius: 5px;
+    }
+
+    /* Stick CTA button ("Let's Innovate") slightly above the social media icons */
+    .cta-button {
+        position: fixed;
+        bottom: 80px; /* Adjusted to stay above social media buttons */
+        
+        
+        width: 80%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+        background-color: #7c2cdd;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    /* Move social sidebar to the bottom */
+    .social-sidebar {
     position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease-in-out;
-}
-
-header.scrolled {
-    background-color: #7c2cdd; /* Changes color on scroll */
-}
-
-nav a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s;
-}
-
-nav a:hover {
-    background-color: #ff6ec7;
-    color: #fff;
-    border-radius: 25px;
-}
-.hero .cta-button {
-    margin-top: 40rem;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    color: #fff;
-    background: linear-gradient(90deg, #ff6ec7, #42d1f5);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 15px rgba(255, 110, 199, 0.5);
-}
-
-.hero .cta-button:hover {
-    background: linear-gradient(90deg, #42d1f5, #ff6ec7);
-    transform: scale(1.1);
-}
-.social-sidebar a img {
-    width: 25px; /* Increase icon size */
-    height: 25px;
-    transition: all 0.3s ease-in-out;
-}
-
-.social-sidebar a img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0px 0px 10px #ff6ec7); /* Adds glowing effect */
+    bottom: 10px; /* Stick at the bottom */
+    left: 50%;
+    transform: translateX(-40%); /* Center it horizontally */
+    
+    display: flex;
+    flex-direction: row;
+  
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
 }
 
 
+    .social-sidebar a img {
+        width: 17px;
+        height: 17px;
+    }
+
+    /* Hide footer on mobile */
+    footer {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+        max-width: 100px; /* Adjusted for responsiveness */
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    header nav {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+
+    header nav a {
+        padding: 8px 12px;
+        font-size: 1rem;
+        text-decoration: none;
+        color: white;
+        background-color: #7c2cdd;
+        border-radius: 5px;
+    }
+}
 
 
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo"><span id="typing-text"></span></div>
@@ -254,26 +368,30 @@ nav a:hover {
         </nav>
     </header>
     <div class="social-sidebar">
-        <a href="https://www.instagram.com/thecreativeinterns/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-        <a href="https://www.linkedin.com/in/creative-interns-8b8103349/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
-        <a href="https://www.youtube.com/@TheCreativeInterns" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-        <a href="https://x.com/KshitijBha22891" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="X"></a>
+        <a href="https://www.instagram.com/thecreativeinterns/" target="_blank"><img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/creative-interns-8b8103349/" target="_blank"><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/@TheCreativeInterns" target="_blank"><img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+        <a href="https://x.com/KshitijBha22891" target="_blank"><img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="X"></a>
     </div>
-    
-    
+
+
 
     <section class="hero">
         <video autoplay muted loop>
             <source src="Pink & Blue Futuristic Gaming Channel Youtube Intro.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            
         </video>
-        <div>
-            <h1>Welcome to <span class="highlight">CreativeInterns</span></h1>
+        <div class="hero-content">
             <p>Your platform for innovation and creativity.</p>
-            <button class="cta-button" onclick="window.location.href='work.html'">🚀 "Let’s Innovate</button>
+            <button class="cta-button" onclick="window.location.href='indexx.html'">🚀 Let’s Innovate</button>
         </div>
+        <div class="mobile-welcome">Welcome to Creative World</div>
     </section>
-
+    
     <footer>
         <p>&copy; 2025 Creative Interns. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
@@ -302,6 +420,5 @@ nav a:hover {
         }
     });
 </script>
-
 
 </html>
